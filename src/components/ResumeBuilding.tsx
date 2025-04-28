@@ -45,24 +45,28 @@ const ResumeBuilding = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-8 px-4 text-blue-600">
+    <div className="max-w-6xl mx-auto py-8 px-6 md:px-4 text-blue-600">
+      <AnimatedSection >
       <div className="mb-10">
         <h1 className="text-3xl font-bold ">Resume Building & Coaching</h1>
         <p>
           Let's talk about where you're headed and how your resume can get you
-          there. 
+          there.
         </p>
         <span className="font-semibold">Schedule a call to get started.</span>
       </div>
+      </AnimatedSection>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-40">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:px-40">
         {services.map((plan, index) => (
-          <PricingCard
-            key={index}
-            plan={plan}
-            // onClick={() => setSelectedPlan(plan.name)}
-            // isSelected={selectedPlan === plan.name}
-          />
+          <AnimatedSection key={plan.name} delay={0.1 * index}>
+            <PricingCard
+              key={index}
+              plan={plan}
+              // onClick={() => setSelectedPlan(plan.name)}
+              // isSelected={selectedPlan === plan.name}
+            />
+          </AnimatedSection>
         ))}
       </div>
     </div>

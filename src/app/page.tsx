@@ -15,7 +15,6 @@ import AdvancePricing from "@/components/AdvancePricing";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-8">
-      {/* <Header /> */}
       <Hero2 />
       <HowWeWork />
       <AboutUs />
@@ -24,7 +23,7 @@ export default function Home() {
       <WhyChooseUs />
       <PricingPlans />
       <AdvancePricing />
-      <ResumeBuilding />
+      <ResumeBuilding /> 
       <ContactCTA/>
       <Footer />
     </main>
