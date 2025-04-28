@@ -7,12 +7,13 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import PricingPlans from "@/components/PricingPlans";
 import ResumeBuilding from "@/components/ResumeBuilding";
 import Footer from "@/components/Footer";
+import Hero2 from "@/components/Hero2";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <Header />
-      <Hero />
+      {/* <Header /> */}
+      <Hero2 />
       <AboutUs />
       <Testimonials />
       <MobiusAdvanced />
