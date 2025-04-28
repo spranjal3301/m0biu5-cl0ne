@@ -3,7 +3,7 @@
 This repository is a **clone of [mobiusengine.ai](https://mobiusengine.ai)**, a job application engine powered by AI. The project replicates the core features of the original platform while adding enhancements like **dark mode**, **animations on landing**, and **mobile responsiveness**.
 
 ## Light Mode Preview
-![Light Mode Preview](https://raw.githubusercontent.com/spranjal3301/mobius-clone/main/public/light-mode-preview.png)
+![Light Mode Preview](https://github.com/spranjal3301/m0biu5-cl0ne/blob/main/public/light-mode-preview.png?raw=true)
 
 
 ## Drak Mode Preview
