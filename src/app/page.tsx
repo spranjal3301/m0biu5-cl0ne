@@ -8,12 +8,14 @@ import PricingPlans from "@/components/PricingPlans";
 import ResumeBuilding from "@/components/ResumeBuilding";
 import Footer from "@/components/Footer";
 import Hero2 from "@/components/Hero2";
+import HowWeWork from "@/components/HowWeWork";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* <Header /> */}
       <Hero2 />
+      <HowWeWork />
       <AboutUs />
       <Testimonials />
       <MobiusAdvanced />
