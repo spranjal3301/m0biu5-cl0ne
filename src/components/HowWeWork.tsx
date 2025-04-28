@@ -32,17 +32,17 @@ const HowWeWork = (props: Props) => {
 
   return (
     <div className="w-full border">
-      <div className="max-w-6xl flex flex-col mx-auto py-16 px-4">
+      <div className="max-w-5xl flex flex-col mx-auto py-8">
         <h2 className="text-blue-600 font-medium text-lg mb-8">How we work?</h2>
 
         <div className="flex flex-row justify-between gap-2">
           {Steps.map((step, index) => (
-            <div className="flex flex-col items-center w-1/4" key={index}>
-              <div className="rounded-full border border-gray-300 w-12 h-12 flex items-center justify-center mb-4">
-                <span className="text-lg">{step.id}</span>
+            <div className="flex flex-col items-start w-1/4 text-lg" key={index}>
+              <div className="rounded-full border border-[#0649E7] w-12 h-12 flex items-center justify-center mb-4">
+                <span className="text-3xl">{step.id}</span>
               </div>
-              <div className="w-full border-t border-gray-300 mb-4"></div>
-              <p className="text-blue-600 text-center text-sm">{step.title}</p>
+              <div className="w-40 border-t-2 border-[#0649E7] mb-4"></div>
+              <p className="text-blue-600 font-semibold text-start text-sm w-40">{step.title}</p>
             </div>
           ))}
         </div>

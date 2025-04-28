@@ -1,32 +1,43 @@
+import SupportIcon from "@/icons/SupportIcon";
+
 const WhyChooseUs = () => {
   const reasons = [
     {
       title: "Trusted",
-      description: "Our founding team has over 40 years of experience in tech and recruiting."
+      description:
+        "Our founding team has over 40 years of experience in tech and recruiting.",
+      icon: <SupportIcon />,
     },
     {
       title: "Human based service",
-      description: "Dedicated and trained team. 360 degree services to support your career transition"
+      description:
+        "Dedicated and trained team. 360 degree services to support your career transition",
+      icon: <SupportIcon />,
     },
     {
       title: "Be the first",
-      description: "Our advanced AI and human driven search and apply daily ensures you are the first to show up."
-    }
+      description:
+        "Our advanced AI and human driven search and apply daily ensures you are the first to show up.",
+      icon: <SupportIcon />,
+    },
   ];
 
   return (
-    <section className="w-full py-16 px-4 md:px-6 bg-gray-50">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Us?</h2>
+    <section className="w-full text-[#022183]">
+      <div className="max-w-6xl bg-blue-50 rounded-3xl mx-auto py-8 px-8">
+        <h2 className="text-3xl font-bold mb-12 text-">Why Choose Us?</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="bg-white p-8 rounded-lg shadow-sm border border-gray-100"
+              className="flex flex-col justify-between p-8 gap-11 rounded-3xl shadow-sm border-2 border-[#022183]"
             >
-              <h3 className="text-xl font-semibold mb-4">{reason.title}</h3>
-              <p className="text-gray-600">{reason.description}</p>
+              <span className="">{reason.icon}</span>
+              <div>
+                <h3 className="text-xl font-semibold mb-4">{reason.title}</h3>
+                <p className="font-light">{reason.description}</p>
+              </div>
             </div>
           ))}
         </div>

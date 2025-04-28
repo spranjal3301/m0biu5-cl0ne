@@ -1,55 +1,61 @@
-import Link from "next/link";
+import React from 'react';
+import { Play, ArrowUpRight } from 'lucide-react';
+import GetStartedButton from './GetStartedButton';
 
-const Testimonials = () => {
+export default function TestimonialsSection() {
   const testimonials = [
     {
       name: "Holly",
-      role: "Senior Executive",
-      quote: "Holly is a senior executive who got over 10 job interviews and an offer she accepted"
+      title: "senior executive",
+      description: "who got over 10 job interviews and an offer she accepted"
     },
     {
-      name: "Joshua",
-      role: "Senior Software Engineer",
-      quote: "Joshua is a senior software engineer who has accepted an offer"
+      name: "Holly",
+      title: "senior executive",
+      description: "who got over 10 job interviews and an offer she accepted"
+    },
+    {
+      name: "Holly",
+      title: "senior executive",
+      description: "who got over 10 job interviews and an offer she accepted"
     }
   ];
 
   return (
-    <section className="w-full py-16 px-4 md:px-6 bg-gray-50">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-12">What our clients have to say</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.name}
-              className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
-            >
-              <p className="text-gray-700">{testimonial.quote}</p>
-              <div className="mt-4">
-                <p className="font-medium">{testimonial.name}</p>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+    <div className="max-w-5xl mx-auto">
+      <div className="flex flex-col rounded-lg gap-16 py-8">
+        <h2 className=" text-blue-600 text-2xl font-medium ">What our clients have to say</h2>
+        
+        <div className="flex flex-col md:flex-row gap-12">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="flex-1 rounded-3xl overflow-hidden  flex flex-col shadow-lg">
+              <div className="bg-white p-20 flex-1 flex items-center justify-center  border-2 border-blue-600">
+                <button className="bg-blue-600 rounded-full p-2 text-white">
+                  <Play size={20} />
+                </button>
+              </div>
+              <div className="bg-blue-600 p-8 text-white  ">
+                <p className="text-sm">
+                  <span className="font-bold">{testimonial.name}</span> is a <span className="font-bold">{testimonial.title}</span> {testimonial.description}
+                </p>
+                <div className="flex justify-end mt-2">
+                  <button className="flex justify-center items-center bg-white size-10 rounded-full p-1 text-blue-600">
+                    <ArrowUpRight size={16} />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
-
-        <div className="mt-8 text-center">
-          <p>
-            More customer testimonials at our{" "}
-            <Link
-              href="https://www.reddit.com/r/mobiusengine/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-medium hover:underline"
-            >
-              LInkedin page
-            </Link>
-          </p>
+        
+        <div className="flex flex-col md:flex-row justify-center gap-4">
+          <button className="border border-blue-600 text-blue-600 rounded-full py-2 px-4 flex items-center justify-center">
+            More customer testimonials 
+            <ArrowUpRight size={16} className="ml-1" />
+          </button>
+          <GetStartedButton/>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Testimonials;
+}

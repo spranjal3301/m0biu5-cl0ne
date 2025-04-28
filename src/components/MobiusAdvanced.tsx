@@ -1,6 +1,6 @@
 const MobiusAdvanced = () => {
   return (
-    <section className="w-full py-16 px-4 md:px-6 bg-white">
+    <section className="w-full py-16 px-4 md:px-6 bg-gray-50">
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="text-3xl font-bold mb-4">Mobius Advanced - Custom Resume for Every Job</h2>
         <p className="text-gray-600 mb-12">

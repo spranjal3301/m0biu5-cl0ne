@@ -55,7 +55,7 @@ export default function Hero2() {
         </Link>
       </header>
 
-      <div className="max-w-6xl flex flex-col md:flex-row items-center justify-center mt-8 mx-auto">
+      <div className="max-w-5xl flex flex-col md:flex-row items-center justify-center mt-8 mx-auto">
         <div className="w-full">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Land job interviews

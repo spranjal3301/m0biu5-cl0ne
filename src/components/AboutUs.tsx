@@ -5,24 +5,26 @@ const AboutUs = () => {
   const teamMembers = [
     {
       name: "Ashwin",
-      image: "https://ext.same-assets.com/3633050338/3587370151.png",
+      image: "/profile1.png",
       role: "Founder",
       bio: "Ashwin is the founder of mobiusengine.ai. He is an accomplished senior executive with over 20 years of experience in cloud infrastructure and financial services. With over 2 decades of experience at Google and JP Morgan, Ashwin held various product and GTM roles. Ashwin is an MBA holder from Yale University.",
-      vision: "Ashwin's vision with Mobius is to give job seekers a significant advantage in securing the roles of their dreams.",
-      linkedin: "https://www.linkedin.com/in/agrawalashwin/"
+      vision:
+        "Ashwin's vision with Mobius is to give job seekers a significant advantage in securing the roles of their dreams.",
+      linkedin: "https://www.linkedin.com/in/agrawalashwin/",
     },
     {
       name: "Nicole",
-      image: "https://ext.same-assets.com/3633050338/3851193643.jpeg",
+      image: "/profile2.png",
       role: "Executive Coach",
-      bio: "Nicole is an Executive coach at Mobius specializing in resume builds and career advisory. With a B.S. in Business Administration from UC Berkeley and 7+ years of experience in AI-driven product strategy, she has seen firsthand how the proper positioning opens doors. She takes a targeted, results-driven approach to help clients confidently stand out and land roles that truly match their skills and potential.",
-      linkedin: "https://www.linkedin.com/in/nicole-lau-01414517/"
-    }
+      bio: "Nicole is an Executive coach at Mobius specializing in resume builds and career advisory.",
+      vision:"With a B.S. in Business Administration from UC Berkeley and 7+ years of experience in Al-driven product strategy, she has seen firsthand how the proper positioning opens doors. She takes a targeted, results-driven approach to help clients confidently stand out and land roles that truly match their skills and potential.",
+      linkedin: "https://www.linkedin.com/in/nicole-lau-01414517/",
+    },
   ];
 
   return (
-    <section className="w-full py-16 px-4 md:px-6 bg-white">
-      <div className="container mx-auto">
+    <section className="w-full  bg-gradient-to-b from-[#0f1836] via-[#15349c] to-blue-700 text-white">
+      <div className="max-w-5xl mx-auto py-14">
         <h2 className="text-3xl font-bold mb-12">About Us</h2>
 
         <div className="space-y-12">
@@ -50,7 +52,7 @@ const AboutUs = () => {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary font-medium hover:underline"
+                    className="text-white font-medium hover:underline"
                   >
                     {member.name}'s LinkedIn
                   </Link>
@@ -60,10 +62,10 @@ const AboutUs = () => {
           ))}
         </div>
 
-        <div className="mt-12">
+        <div className="w-full flex flex-col justify-center items-center  mt-10">
           <Link
             href="/about-us"
-            className="text-primary font-medium hover:underline"
+            className="font-medium hover:underline"
           >
             Learn more about our Board of Advisors
           </Link>
@@ -74,7 +76,7 @@ const AboutUs = () => {
               href="https://www.linkedin.com/company/mobiusservices"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary font-medium hover:underline ml-1"
+              className=" font-medium hover:underline ml-1"
             >
               Linkedin page
             </Link>
