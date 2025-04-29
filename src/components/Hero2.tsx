@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,6 +12,7 @@ import LogoIcon from "@/icons/LogoIcon";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 import Bookmookup from "@/icons/bookmookup";
+import { motion } from 'framer-motion';
 
 export const navItems = [
   { label: "Home", href: "/" },
@@ -25,7 +28,7 @@ export default function Hero2() {
       <header className="container mx-auto px-4 py-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <LogoIcon className="w-[30px] md:w-[69px]" />
-          <span className="text-xl font-medium">MobiusEngine</span>
+          <span className="text-lg md:text-xl font-medium">MobiusEngine</span>
         </div>
 
         <nav className="hidden xl:flex items-center font-medium gap-12">
@@ -55,18 +58,43 @@ export default function Hero2() {
         </Link>
       </header>
 
-      <div className="max-w-5xl flex flex-col md:flex-row items-center justify-center mt-8 mx-auto">
+      <div className="max-w-5xl px-6 flex flex-col md:flex-row   items-center justify-center mt-8 mx-auto">
         <div className="w-full">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            Land job interviews
+            <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.1,
+                  ease: "easeOut",
+                }}
+            >Land job interviews
+            </motion.span>
             <br />
-            <span className="text-6xl md:text-7xl">
-              <span className="text-[#022182]">10x</span> faster</span>
+            <motion.span className="text-6xl md:text-7xl"
+             initial={{ opacity: 0, y: 20 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{
+               duration: 0.8,
+               delay: 0.2,
+               ease: "easeOut",
+             }}
+            >
+              <span className="text-[#022182]">10x</span> faster</motion.span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-md">
+          <motion.p
+           initial={{ opacity: 0, y: 20 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{
+             duration: 0.8,
+             delay: 0.2,
+             ease: "easeOut",
+           }}
+          className="text-lg md:text-xl mb-8 max-w-md">
             Custom-built resumes that match your goals, keywords, and recruiter
             expectations.
-          </p>
+          </motion.p>
           <Link
             href="#"
             className="inline-flex items-center gap-2 bg-white text-[#022183] px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition-colors"
@@ -75,7 +103,7 @@ export default function Hero2() {
           </Link>
         </div>
 
-        <Bookmookup className="cursor-pointer" />
+        <Bookmookup className="cursor-pointer md:w-auto w-72" />
       </div>
     </div>
   );

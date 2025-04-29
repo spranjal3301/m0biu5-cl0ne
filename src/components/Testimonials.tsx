@@ -1,6 +1,7 @@
 import React from 'react';
 import { Play, ArrowUpRight } from 'lucide-react';
 import GetStartedButton from './GetStartedButton';
+import AnimatedSection from './ui/AnimatedSection';
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -22,13 +23,13 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto px-6">
       <div className="flex flex-col rounded-lg gap-16 py-8">
         <h2 className=" text-blue-600 text-2xl font-medium ">What our clients have to say</h2>
         
         <div className="flex flex-col md:flex-row gap-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="flex-1 rounded-3xl overflow-hidden  flex flex-col shadow-lg">
+            <AnimatedSection delay={0.1 * index} key={index} className="flex-1 rounded-3xl overflow-hidden  flex flex-col shadow-lg">
               <div className="bg-white p-20 flex-1 flex items-center justify-center  border-2 border-blue-600">
                 <button className="bg-blue-600 rounded-full p-2 text-white">
                   <Play size={20} />
@@ -44,7 +45,7 @@ export default function TestimonialsSection() {
                   </button>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
         

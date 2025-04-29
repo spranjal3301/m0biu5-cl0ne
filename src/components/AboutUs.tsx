@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedSection from "./ui/AnimatedSection";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -23,13 +24,13 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="w-full  bg-gradient-to-b from-[#0f1836] via-[#15349c] to-blue-700 text-white">
+    <section className="w-full px-6  bg-gradient-to-b from-[#0f1836] via-[#15349c] to-blue-700 text-white">
       <div className="max-w-5xl mx-auto py-14">
         <h2 className="text-3xl font-bold mb-12">About Us</h2>
 
         <div className="space-y-12">
-          {teamMembers.map((member) => (
-            <div key={member.name} className="flex flex-col md:flex-row gap-8">
+          {teamMembers.map((member,index) => (
+            <AnimatedSection delay={0.1 * index} key={member.name} className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/4">
                 <Image
                   src={member.image}
@@ -58,7 +59,7 @@ const AboutUs = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
